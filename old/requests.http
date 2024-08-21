@@ -1,0 +1,16 @@
+@baseUrl = http://127.0.0.1:5500/pasta/index.html
+
+# Valid request parameters
+#  width=1920
+#  height=1080
+#  aspect=16:9
+#  repo=runarsf/wallpapers
+#  path=landscapes
+
+###
+
+GET {{baseUrl}}
+
+###
+
+GET {{baseUrl}}/runarsf/wallpapers/landscapes/

@@ -3,25 +3,13 @@ function getRandomInt(max, seed) {
     const myrng = new Math.seedrandom(seed);
     return Math.abs(myrng.int32()) % max;
 }
-/*
-var today = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-var yyyy = today.getFullYear();
-
-today = dd + '/' + mm + '/' + yyyy;
-pics = 5;
-
-console.log(getRandomInt(pics, today));
-console.log(getRandomInt(pics, today));*/
 
 document.addEventListener('DOMContentLoaded', (event) => {
+
     // url = window.location.pathname;
-    const repoName = 'dotfiles';
-    const userName = 'runarsf';
-    const apiUrl = `https://api.github.com/repos/${userName}/${repoName}/contents`;
-    url = '/dotfiles/.config/hypr/'
-    url = url.replace(`/${repoName}`, '');
+    const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents`;
+    // url = '/dotfiles/.config/hypr/'
+    // url = url.replace(`/${repoName}`, '');
     const getPathParts = () => url.split('/').filter(Boolean);
     // const folder = getPathParts()[getPathParts().length - 1]
     // console.log(folder)
@@ -47,5 +35,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     };
 
-    redirectToImage();
+    // redirectToImage();
 });
